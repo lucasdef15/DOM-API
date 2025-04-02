@@ -8,7 +8,7 @@ input.placeholder = 'Add a To Do Item'
 form.appendChild(input)
 
 const button = document.createElement('button')
-button.innerText = 'ADD'
+button.innerText = 'ADD!'
 form.appendChild(button)
 
 const removeElement = (el) => {
