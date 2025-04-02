@@ -1,0 +1,75 @@
+body {
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+form input {
+    all: unset;
+    border: 1px solid grey;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+form button {
+    all: unset;
+    border: 1px solid grey;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+form button:hover {
+    border-color: green;
+    scale: 1.1;
+    transition: scale ease-in-out 250ms, border-color ease-in-out 250ms;
+}
+
+#mainContainer ul li {
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+#mainContainer ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-image: url('../assets/icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Fade effect on hover */
+#mainContainer ul li:hover::before {
+    opacity: 0;
+}
+
+#mainContainer ul li:hover {
+    cursor: pointer;
+}
+
+/* Create a second pseudo-element for smooth transition */
+#mainContainer ul li:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-image: url('../assets/remove.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
